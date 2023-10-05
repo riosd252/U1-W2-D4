@@ -106,6 +106,24 @@ console.log(epify("is awesome")); // Adds EPICODE at the start of the string.
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 6");
+
+function check3and7(n) {
+  if (typeof n === "number") {
+    if (n % 3 === 0) {
+      return (check3and7 = n + " is multiple of 3.");
+    } else if (n % 7 === 0) {
+      return (check3and7 = n + " is multiple of 7.");
+    } else {
+      return (check3and7 = n + " is not a multiple of 3 or 7.");
+    }
+  } else {
+    return "Field requires a positive number.";
+  }
+}
+
+console.log(check3and7(90));
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
