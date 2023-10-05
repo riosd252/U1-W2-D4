@@ -130,6 +130,18 @@ console.log(check3and7(90));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 7");
+
+function reverseString(string) {
+  if (typeof string === "string") {
+    return (reverseString = string.split("").reverse().join(""));
+  } else {
+    return "Field requires a string.";
+  }
+}
+
+console.log(reverseString("Supercalifragilistico"));
+
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
