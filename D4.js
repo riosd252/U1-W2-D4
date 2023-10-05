@@ -7,10 +7,13 @@
 console.log("Esercizio 1");
 
 function area(l1, l2) {
-  return (area = l1 * l2);
+  let calcArea = l1 * l2;
+
+  return calcArea;
 }
 
 console.log("L'area del rettangolo è: " + area(50, 20) + "cm2");
+console.log("L'area del rettangolo è: " + area(70, 30) + "cm2");
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -23,15 +26,22 @@ console.log("L'area del rettangolo è: " + area(50, 20) + "cm2");
 console.log("Esercizio 2");
 
 function crazySum(n1, n2) {
+  let sameFactors = null;
+
   if (n1 === n2) {
-    return (crazySum = (n1 + n2) * 3);
+    sameFactors = (n1 + n2) * 3;
+
+    return sameFactors;
   } else {
-    return (crazySum = n1 + n2);
+    sameFactors = n1 + n2;
+
+    return sameFactors;
   }
 }
 
-// console.log(crazySum(3, 4)); Il risultato è 7
-console.log(crazySum(4, 4)); // Il risultato è 24, pari a (4 + 4) x 3
+console.log(crazySum(10, 15));
+console.log(crazySum(4, 4));
+console.log(crazySum(5, 5));
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -43,15 +53,22 @@ console.log(crazySum(4, 4)); // Il risultato è 24, pari a (4 + 4) x 3
 console.log("Esercizio 3");
 
 function crazyDiff(n1) {
+  let crazyDiff = null;
+
   if (n1 <= 19) {
-    return (crazyDiff = n1 - 19);
+    crazyDiff = Math.abs(n1 - 19);
+
+    return crazyDiff;
   } else {
-    return (crazyDiff = (n1 - 19) * 3);
+    crazyDiff = (n1 - 19) * 3;
+
+    return crazyDiff;
   }
 }
 
-// console.log(crazyDiff(18)); Il risultato è -1
-console.log(crazyDiff(20)); // Il risultato è 3, pari a (20-19) x 3
+console.log(crazyDiff(18));
+console.log(crazyDiff(20));
+console.log(crazyDiff(5));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -63,6 +80,8 @@ console.log(crazyDiff(20)); // Il risultato è 3, pari a (20-19) x 3
 console.log("Esercizio 4");
 
 function boundary(n) {
+  let boundary = null;
+
   if ((n >= 20 && n <= 100) || n === 400) {
     return (boundary = true);
   } else {
@@ -70,9 +89,9 @@ function boundary(n) {
   }
 }
 
-// console.log(boundary(19)); Il risultato è false perchè il numero non è compreso tra 20 e 100 inclusi.
-// console.log(boundary(50)); Il risultato è true perchè il numero è compreso tra 20 e 100 inclusi.
-console.log(boundary(400)); // IL risultato è true perchè il numero è 400.
+console.log(boundary(19));
+console.log(boundary(50));
+console.log(boundary(400));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -85,19 +104,24 @@ console.log(boundary(400)); // IL risultato è true perchè il numero è 400.
 console.log("Esercizio 5");
 
 function epify(s) {
+  let epify = null;
+
   if (typeof s === "string") {
     if (s.indexOf("EPICODE") === 0) {
-      return (epify = s);
+      epify = s;
+      return epify;
     } else {
-      return (epify = "EPICODE" + " " + s);
+      epify = "EPICODE" + " " + s;
+
+      return epify;
     }
   } else {
     return "Field requires a string.";
   }
 }
-// console.log(epify(2)); Displays warning message.
-// console.log(epify("EPICODE is awesome")); Returns string as is.
-console.log(epify("is awesome")); // Adds EPICODE at the start of the string.
+console.log(epify(2));
+console.log(epify("EPICODE is awesome"));
+console.log(epify("is awesome"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -110,19 +134,29 @@ console.log("Esercizio 6");
 
 function check3and7(n) {
   if (typeof n === "number") {
+    let check3and7 = null;
+
     if (n % 3 === 0) {
-      return (check3and7 = n + " is multiple of 3.");
+      check3and7 = n + " is multiple of 3.";
+
+      return check3and7;
     } else if (n % 7 === 0) {
-      return (check3and7 = n + " is multiple of 7.");
+      check3and7 = n + " is multiple of 7.";
+
+      return check3and7;
     } else {
-      return (check3and7 = n + " is not a multiple of 3 or 7.");
+      check3and7 = n + " is not a multiple of 3 or 7.";
+
+      return check3and7;
     }
   } else {
     return "Field requires a positive number.";
   }
 }
 
+console.log(check3and7(80));
 console.log(check3and7(90));
+console.log(check3and7(49));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
@@ -133,14 +167,19 @@ console.log(check3and7(90));
 console.log("Esercizio 7");
 
 function reverseString(string) {
+  let reverseString = null;
+
   if (typeof string === "string") {
-    return (reverseString = string.split("").reverse().join(""));
+    reverseString = string.split("").reverse().join("");
+
+    return reverseString;
   } else {
     return "Field requires a string.";
   }
 }
 
 console.log(reverseString("Supercalifragilistico"));
+console.log(reverseString("Questa non è una faccina felice. :D"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -148,6 +187,8 @@ console.log(reverseString("Supercalifragilistico"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function upperFirst(string) {}
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
